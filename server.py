@@ -38,6 +38,8 @@ class ServidorTCP:
                 elif mensaje == "LISTAR":
                     clientes_str = "\n".join([f"{c[0]}:{c[1]}" for c in self.clientes])
                     conn.sendall(f"Clientes conectados:\n{clientes_str}".encode())
+                elif mensaje == "hola servidor":
+                    conn.sendall("HOLA CLIENTE".encode())
                 else:
                     conn.sendall(f"Eco: {mensaje.upper()}".encode())
 
