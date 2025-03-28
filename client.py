@@ -19,7 +19,7 @@ class ClienteTCP:
                     mensaje = input("💬 Mensaje (APAGAR/DESCONEXION/LISTAR): ").strip()
                     s.sendall(mensaje.encode())
 
-                    if mensaje in ["APAGAR", "DESCONEXION"]:
+                    if mensaje in ["APAGAR", "DESCONEXION", "LISTAR"]:
                         print("🔴 Cerrando conexión...")
                         break
 
